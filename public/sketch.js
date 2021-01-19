@@ -1,3 +1,11 @@
+let socket = io();
+socket.on("connect", newConnection);
+
+function newConnection() {
+  console.log("your id:", socket.id);
+}
+
+
 function preload(){
   // put preload code here
 }
@@ -9,4 +17,5 @@ function setup() {
 
 function draw() {
   // put drawing code here
+  ellipse(mouseX, mouseY, 30)
 }
