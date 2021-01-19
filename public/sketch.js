@@ -11,11 +11,14 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth,windowHeight)
+  let cnv = createCanvas(windowWidth,windowHeight);
+cnv.style('z-index', '0')
   // put setup code here
 }
 
 function draw() {
   // put drawing code here
-  ellipse(mouseX, mouseY, 30)
+  background('white');
+  ellipse(mouseX, mouseY, 30);
+  console.log(mouseX)
 }
