@@ -1,0 +1,70 @@
+
+
+/**************TENDA**********/
+
+
+canvas {
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+    pointer-events: auto;
+}
+
+#toggle,
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+#toggle {
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 13;
+    cursor: crosshair;
+}
+
+.dropped #toggle {
+    height: 60px;
+    display: none;
+    z-index: 1;
+}
+
+
+
+.dropped canvas {
+    pointer-events: none
+}
+
+
+.dropped #curtain {
+    position: absolute;
+    opacity: 1;
+}
+
+
+
+
+.marquee{
+  z-index: 20;
+  background-color: black;
+}
+
+.text-marquee{
+  font-family: sans-serif;
+  color: white;
+}
+
+
+
+
+
+#canvacontainer{
+  width: 100vw;
+  height: 100vh;
+  border: solid black 1px;
+  margin: 0;
+
+}
