@@ -285,9 +285,9 @@
 
 
 
-            document.getElementById("toggle").addEventListener("click", F, !1);
-            t()
-        } else if (startGame== true)document.body.classList.add("no__webgl"), document.getElementById("toggle").addEventListener("click", m, !1);
+
+            t();
+        } else document.body.classList.add("no__webgl"), document.getElementById("toggle");
         x.prototype.addForce = function(a) {
             this.a.add(this.tmp2.copy(a).multiplyScalar(this.invMass))
         };
@@ -327,7 +327,7 @@
         }
 
         window.onload = function () {
-            var fiveMinutes = 4
+            var fiveMinutes = 3
                 display = document.querySelector('#timer');
             startTimer(fiveMinutes, display);
         };
