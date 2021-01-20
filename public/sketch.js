@@ -26,14 +26,14 @@ function draw() {
   // console.log(mouseX)
 
 
-  function timerdown() {
-  if (timer < 1) {
-    timer = 0;
-  } else {
-    timer -= 1
-  }
-}
-
-document.getElementById('timer').innerHTML = timer
+//   function timerdown() {
+//   if (timer < 1) {
+//     timer = 0;
+//   } else {
+//     timer -= 1
+//   }
+// }
+//
+// document.getElementById('timer').innerHTML = timer
 
 }
