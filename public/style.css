@@ -7,7 +7,7 @@ canvas {
     right: 0;
     bottom: 0;
     z-index: 12;
-    pointer-events: auto;
+
 }
 
 #toggle,
@@ -24,8 +24,10 @@ canvas {
     width: 100%;
     display: block;
     z-index: 13;
-    cursor: crosshair;
+cursor: crosshair;
 }
+
+
 
 .dropped #toggle {
     height: 60px;
@@ -65,10 +67,12 @@ canvas {
 #canvacontainer{
   width: 100vw;
   height: 100vh;
-  /* border: solid black 1px; */
+  border: solid black 1px;
   margin: 0;
-  z-index: 100;
-  /* background-color: red; */
+  z-index: 0;
+  background-color: red;
+
+  position:fixed;
 
 }
 
@@ -88,4 +92,13 @@ canvas {
   position: absolute;
   top: 0;
   text-align: center;
+}
+
+#divmouse{
+  width: 10vw;
+  height:10vw;
+  border: solid black 1px;
+  z-index: 200;
+  position: absolute;
+
 }
