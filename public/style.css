@@ -65,9 +65,16 @@ canvas {
 #canvacontainer{
   width: 100vw;
   height: 100vh;
-  border: solid black 1px;
+  /* border: solid black 1px; */
   margin: 0;
   z-index: 100;
-  background-color: red;
+  /* background-color: red; */
 
+}
+
+#timer{
+  left: 50%;
+  z-index= 150;
+  font-family: san-serif;
+  font-size: 5vw;
 }

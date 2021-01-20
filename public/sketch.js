@@ -6,7 +6,7 @@ function newConnection() {
 
 }
 
-
+let timer = 5;
 
 
 function preload(){
@@ -14,14 +14,26 @@ function preload(){
 }
 
 function setup() {
-  let cnv = createCanvas(windowWidth,windowHeight);
-cnv.style('z-index', '0')
+//   let cnv = createCanvas(windowWidth,windowHeight);
+// cnv.style('z-index', '0')
   // put setup code here
 }
 
 function draw() {
   // put drawing code here
-  background('white');
-  ellipse(mouseX, mouseY, 30);
-  console.log(mouseX)
+  // background('white');
+  // ellipse(mouseX, mouseY, 30);
+  // console.log(mouseX)
+
+
+  function timerdown() {
+  if (timer < 1) {
+    timer = 0;
+  } else {
+    timer -= 1
+  }
+}
+
+document.getElementById('timer').innerHTML = timer
+
 }
