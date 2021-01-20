@@ -3,7 +3,10 @@ socket.on("connect", newConnection);
 
 function newConnection() {
   console.log("your id:", socket.id);
+
 }
+
+
 
 
 function preload(){
