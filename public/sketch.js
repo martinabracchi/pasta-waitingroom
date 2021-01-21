@@ -12,7 +12,7 @@ function newConnection() {
 
 function drawOtherMouse(data){
   push();
-  clear();
+  // clear();
   noStroke();
   fill('blue');
   ellipse(data.x, data.y, 30);
@@ -32,7 +32,7 @@ function setup() {
 
 function mouseMoved() {
 push();
-clear();
+// clear();
 noStroke();
 fill('black');
 ellipse(mouseX, mouseY, 30);
