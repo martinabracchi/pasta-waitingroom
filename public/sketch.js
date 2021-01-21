@@ -4,7 +4,11 @@ let socket = io();
 socket.on("connect", newConnection);
 socket.on('mouseBroadcast', drawOtherMouse);
 
-
+function preload(){
+  // put preload code here
+  bf = loadImage('assets/blackfork.png');
+  rf = loadImage('assets/redfork.png');
+}
 
 
 function newConnection() {
@@ -14,16 +18,12 @@ function newConnection() {
 function drawOtherMouse(data){
 push();
 clear();
-  noStroke();
-  fill(color('blue'));
-  ellipse(data.x, data.y, 30);
+image(bf, data.x, data.y, 120, 120);
 pop();
 }
 
 
-function preload(){
-  // put preload code here
-}
+
 
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
@@ -34,8 +34,7 @@ function setup() {
 function mouseMoved() {
 push();
 clear();
-fill('black');
-ellipse(mouseX, mouseY, 30);
+image(rf, mouseX, mouseY, 120, 120);
 pop();
 
 let message = {
@@ -45,4 +44,11 @@ let message = {
 
 
 socket.emit("mouse", message)
+}
+
+
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
