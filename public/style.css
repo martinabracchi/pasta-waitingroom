@@ -69,8 +69,8 @@ cursor: crosshair;
   height: 100vh;
   border: solid black 1px;
   margin: 0;
-  z-index: 0;
-  background-color: red;
+  z-index: 200;
+
 
   position:fixed;
 
@@ -92,13 +92,4 @@ cursor: crosshair;
   position: absolute;
   top: 0;
   text-align: center;
-}
-
-#divmouse{
-  width: 10vw;
-  height:10vw;
-  border: solid black 1px;
-  z-index: 200;
-  position: absolute;
-
 }

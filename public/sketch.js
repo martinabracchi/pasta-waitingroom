@@ -1,12 +1,23 @@
 let socket = io();
 socket.on("connect", newConnection);
 
+socket.on('connect', newConnection);
+socket.on('mouseBroadcast', drawOtherMouse);
+
+
+
 function newConnection() {
   console.log("your id:", socket.id);
-
 }
 
-
+function drawOtherMouse(data){
+  push();
+  clear();
+  noStroke();
+  fill('blue');
+  ellipse(data.x, data.y, 30);
+  pop();
+}
 
 
 function preload(){
@@ -14,17 +25,26 @@ function preload(){
 }
 
 function setup() {
-  let cnv = createCanvas(500, 500);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('canvacontainer');
   // cnv.style(z-index, 100)
 }
 
-function draw() {
+function mouseMoved() {
+push();
+clear();
+noStroke();
+fill('black');
+ellipse(mouseX, mouseY, 30);
+pop();
 
-  background();
-  fill('black');
-  ellipse(mouseX, mouseY, 30);
+let message ={
+  x: mouseX,
+  y:mouseY,
+};
 
+
+socket.emit('mouse', message)
 
 
 

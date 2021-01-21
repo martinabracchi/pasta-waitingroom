@@ -15,7 +15,7 @@
 <p class="text-marquee">1ST TIME PENNE RIGATE ARE FACING SPAGHETTI, FIRST TIME SPAGHETTI WIN</p>
 </marquee>
 
-<div id='divmouse'></div>
+
 
 
 <!-- CODICE TENDA MIAO -->
@@ -320,7 +320,8 @@
                 }
 
                 if (timer==-1) {
-        F()
+        F();
+        document.getElementById('canvacontainer').style.display = 'none';
                 }
             }, 1000);
 
@@ -337,16 +338,7 @@
 
 
 </script>
-<script>
-const mouseFollow = document.getElementById('divmouse');
 
-document.addEventListener('mousemove', (e) => {
-  mouseFollow.style.cssText = `
-    left: ${e.pageX - divmouse.width}px;
-    top:  ${e.pageY - divmouse.height}px;
-  `;
-});
-</script>
 
   </head>
   <body>
