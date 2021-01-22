@@ -18,7 +18,8 @@ function newConnection() {
 function drawOtherMouse(data){
 push();
 clear();
-image(bf, data.x, data.y, 120, 120);
+translate(-60, -60)
+image(bf, data.x, data.y, 150,150);
 pop();
 }
 
@@ -28,14 +29,15 @@ pop();
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('canvacontainer');
+
   // cnv.style(z-index, 100)
 }
 
 function mouseMoved() {
-push();
+push()
 clear();
-image(rf, mouseX, mouseY, 120, 120);
-pop();
+image(rf, mouseX, mouseY, 150, 150);
+pop()
 
 let message = {
   x: mouseX,
