@@ -167,3 +167,10 @@ margin-bottom: 10%;
 bottom: 0;
 position: absolute;
 }
+
+#dente{
+  width: 25%;
+  height: auto;
+  left:30%;
+  position: relative;
+}
