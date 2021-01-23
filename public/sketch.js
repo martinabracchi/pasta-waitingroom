@@ -21,9 +21,9 @@ function drawOtherMouse(data){
 clear();
 imageMode(CENTER);
 if(windowWidth<990){
-image(bf, data.x, data.y, windowWidth/4,windowWidth/4);
+image(bf, data.x * width, data.y *height, windowWidth/4,windowWidth/4);
 }else{
-image(bf, data.x, data.y, windowWidth/10,windowWidth/10);
+image(bf, data.x * width, data.y * height, windowWidth/10,windowWidth/10);
 }
 }
 
@@ -46,8 +46,8 @@ if(windowWidth<990){
 image(wf, mouseX, mouseY, windowWidth/10, windowWidth/10);
 }
 let message = {
-  x: mouseX,
-  y:mouseY,
+  x: mouseX/width,
+  y:mouseY/height,
 };
 
 
