@@ -1,5 +1,5 @@
-var
-  disasterIntro = new IntroManager;
+//funzione tovaglia, F() è la funzione che la fa cadere. all'interno c'è il timer che la fa cadere dopo 5 secondi.
+var disasterIntro = new IntroManager;
 
 
 function IntroManager() {
@@ -70,7 +70,7 @@ function IntroManager() {
 
   function B() {
     var a = new THREE.TextureLoader,
-      c = ["tovaglia.png", "tovaglia.png", "tovaglia.png"];
+      c = ["Dimensioni_min_tovaglia.png", "Dimensioni_med_tovaglia.png", "tovaglia.png"];
     if (.9 <= v) {
       var h = c[2];
       var f = 1;
@@ -268,14 +268,17 @@ function IntroManager() {
 
       display.textContent = seconds;
 
+//quando il timer è a zero la tenda cade, faccio scomparire i numeri, il bottone di uscita e la canvas contenente i cursori.
+
       if (--timer < 0) {
         document.getElementById("timer").style.display = 'none';
+        document.getElementById('stop').style.display = 'none';
+        document.getElementById('canvacontainer').style.display = 'none';
       }
 
       if (timer == -1) {
         F();
-        // document.getElementById('canvacontainer').style.display = 'none';
-      }
+}
     }, 1000);
 
 

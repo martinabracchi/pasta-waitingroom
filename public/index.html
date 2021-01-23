@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="https://use.typekit.net/ttj2hjf.css">
   <script src='/socket.io/socket.io.js'></script>
   <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.min.js"></script>
-<script src="js/vendor.003.min.js"></script>
-<div id="threejs"></div>
+  <script src="js/vendor.003.min.js"></script>
+  <div id="threejs"></div>
 
-<div id="toggle" class="noselect crosshair"></div>
-<script type="x-shader/x-fragment" id="fragmentShaderDepth">
+  <div id="toggle" class="noselect crosshair"></div>
+  <script type="x-shader/x-fragment" id="fragmentShaderDepth">
     #include <packing>
     uniform sampler2D texture;
     varying vec2 vUV;
@@ -29,7 +29,7 @@
     }
 </script>
 
-<script type="x-shader/x-vertex" id="vertexShaderDepth">
+  <script type="x-shader/x-vertex" id="vertexShaderDepth">
     varying vec2 vUV;
     void main() {
       vUV = 0.75 * uv;
@@ -37,20 +37,32 @@
       gl_Position = projectionMatrix * mvPosition;
     }
 </script>
-    <script src='js/tenda.js'></script>
+  <script src='js/tenda.js'></script>
   <script src="p5.min.js"></script>
   <script src="p5.sound.min.js"></script>
   <script src='sketch.js'></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-  <marquee class="marquee" width="100%" height="30%" behavior="scroll" bgcolor="red">
-    <p class="text-marquee">1ST TIME PENNE RIGATE ARE FACING SPAGHETTI, FIRST TIME SPAGHETTI WIN</p>
-  </marquee>
 </head>
+
 <body>
   <div id='canvacontainer'></div>
   <div id='divtimer'>
     <p id='timer'></p>
+  </div>
+
+  <div id='divstop'>
+
+
+  <button id='stop' type="button" onclick="window.location.href='/finale.html'">Non voglio giocare - Martina basta!!</button>
+
+</div>
+
+
+  <div id='divmarquee'>
+    <marquee class="marquee" width="100%" height="5%" behavior="scroll">
+      <p class="text-marquee">1ST TIME PENNE RIGATE ARE FACING SPAGHETTI, FIRST TIME SPAGHETTI WIN</p>
+    </marquee>
   </div>
 </body>
 

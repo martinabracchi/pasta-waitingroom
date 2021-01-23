@@ -8,6 +8,7 @@ function preload(){
   // put preload code here
   bf = loadImage('assets/blackfork.png');
   rf = loadImage('assets/redfork.png');
+  wf = loadImage('assets/whitefork.png');
 }
 
 
@@ -16,11 +17,14 @@ function newConnection() {
 }
 
 function drawOtherMouse(data){
-push();
+
 clear();
-translate(-60, -60)
-image(bf, data.x, data.y, 150,150);
-pop();
+imageMode(CENTER);
+if(windowWidth<990){
+image(bf, data.x, data.y, windowWidth/4,windowWidth/4);
+}else{
+image(bf, data.x, data.y, windowWidth/10,windowWidth/10);
+}
 }
 
 
@@ -29,16 +33,18 @@ pop();
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('canvacontainer');
-
+  noCursor();
   // cnv.style(z-index, 100)
 }
 
 function mouseMoved() {
-push()
 clear();
-image(rf, mouseX, mouseY, 150, 150);
-pop()
-
+imageMode(CENTER);
+if(windowWidth<990){
+  image(wf, mouseX, mouseY, windowWidth/4, windowWidth/4)
+}else{
+image(wf, mouseX, mouseY, windowWidth/10, windowWidth/10);
+}
 let message = {
   x: mouseX,
   y:mouseY,
