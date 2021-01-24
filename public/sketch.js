@@ -7,7 +7,6 @@ socket.on('mouseBroadcast', drawOtherMouse);
 function preload(){
   // put preload code here
   bf = loadImage('assets/blackfork.png');
-  rf = loadImage('assets/redfork.png');
   wf = loadImage('assets/whitefork.png');
 }
 

@@ -1,7 +1,6 @@
 //funzione tovaglia, F() è la funzione che la fa cadere. all'interno c'è il timer che la fa cadere dopo 5 secondi.
 var disasterIntro = new IntroManager;
 
-
 function IntroManager() {
 
 
@@ -23,10 +22,7 @@ function IntroManager() {
   }
 
 
-  function F() {
-    0 < q.length ? (q = y[0], document.body.classList.add("dropped")) :
-      (E = 10, q = y[1], document.body.classList.remove("dropped"), z = !0, l && (l.visible = !0))
-  }
+
 
   if ($('#timer').html() == 0) {
     F()
@@ -235,12 +231,9 @@ function IntroManager() {
     A();
     window.addEventListener("resize", N, !1);
 
-
-
-
-
-    t();
-  } else document.body.classList.add("no__webgl"), document.getElementById("toggle");
+t();
+  }
+  else document.body.classList.add("no__webgl"), document.getElementById("toggle");
   x.prototype.addForce = function(a) {
     this.a.add(this.tmp2.copy(a).multiplyScalar(this.invMass))
   };
@@ -255,9 +248,14 @@ function IntroManager() {
     this.a.set(0, 0, 0)
   }
 
+  function F() {
+    0 < q.length ? (q = y[0], document.body.classList.add("dropped")) :
+      (E = 10, q = y[1], document.body.classList.remove("dropped"), z = !0, l && (l.visible = !0))
+  }
+
 
   function startTimer(duration, display) {
-    var timer = duration,
+    let timer = duration,
       seconds;
     setInterval(function() {
 
@@ -268,12 +266,14 @@ function IntroManager() {
 
       display.textContent = seconds;
 
+
 //quando il timer è a zero la tenda cade, faccio scomparire i numeri, il bottone di uscita e la canvas contenente i cursori.
 
       if (--timer < 0) {
         document.getElementById("timer").style.display = 'none';
         document.getElementById('stop').style.display = 'none';
         document.getElementById('canvacontainer').style.display = 'none';
+
       }
 
       if (timer == -1) {
