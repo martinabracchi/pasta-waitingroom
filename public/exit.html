@@ -11,6 +11,7 @@
   </style>
   <!-- Computer stylesheet -->
       <link rel='stylesheet' type='text/css' href='assets/css/exit.css' media="screen and (min-width:992px)"  >
+            <link rel='stylesheet' type='text/css' href='assets/css/common.css' media="screen and (min-width:992px)"  >
             <!-- Mobile portrait mode -->
       <link rel='stylesheet' type='text/css' href='assets/css/mobile-portrait/exit-mp.css' media="screen and (orientation:portrait) and (max-width:991px)" >
 
@@ -51,30 +52,36 @@
 </head>
 
 <body onload='switchText()'>
-  <div id='div-header-final'>
-  <p id='header-final'>Grazie per aver giocato</p>
-  </div>
 
-
-  <p id='title-trivia'>DID YOU KNOW?</p>
-<div id="div-trivia">
-<p id= 'randomTrivia'></p>
+  <div id="header">
+<span onclick='openAbout()'class='header-btn' id='about-btn'> About</span>
+<span onclick='openRan()'class='header-btn' id='ranking-btn'>Ranking</span>
+<div id='title'>PASTA CHUTE</div>
 </div>
 
-<div id='div-info'>
-  <p id='info'>*IL TUO CONTRIBUTO  È IMPORTANTISSIMO AI FINI DI UNA RICERCA SOCIOLOGICA FILOSOFIA IL DESIGN È TRADUZIONE. STO A FA UN SONDAGGIO CHE NATIONAL GEPGRAPHIC HA, SI VE PIACE UNO COME VE MOVETE? CHE MO TUTTI A CHIEDERE MARTINA LO HAI SCRITTO IL CODICE, MA È RESPONSIVE? MAI NESSUNO CHE CHIEDE COME STAI MARTINA? MAI NESSUNO CHE DICE COME SEI CARINA MARTINA, MICA SO VOSTRA SORELLA OH. </p>
+  <div id='div-header-final'>
+  <p id='header-final'>Thank you and arrivederci!</p>
   </div>
+
+
+
+<div id="div-trivia">
+    <p id='title-trivia'>DID YOU KNOW?</p>
+<p id= 'randomTrivia'></p>
+</div>
+<div id='div-info'><p id='info'>*YOUR CONTRIBUTION WAS FUNDAMENTAL FOR THE RAISE OF INTERNATIONAL AWARENESS ABOUT PASTA. SEND THIS LINK TO YOUR FRIENDS AND FAMILY SO WE CAN ALL PLAY OUR PART IN THIS CAUSE.</p></div>
+
 
 <div id='div-aiapl'>
   <img id='aiapl'src="assets/aiapl.gif" alt="AIAPL" title="AIAPL" />
 </div>
 <img  id='dente' src='assets/dente.png' alt='Al dente' title='Al dente'/>
+<img  id='pin' src='assets/pin.png' alt='Mattarello' title='Mattarello'/>
 
-<div id='divmarquee'>
   <marquee class="marquee" width="100%" height="5%" behavior="scroll">
-    <p class="text-marquee">*ITALIANS SCREAMING VERY LOUDLY*</p>
+    <p id="text-marquee">*ITALIANS SCREAMING VERY LOUDLY*</p>
   </marquee>
-</div>
+
       </body>
 
       </html>
