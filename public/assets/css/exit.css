@@ -47,10 +47,10 @@ position:relative;
 }
 
 #dente{
-  width: 30%;
+  width: 25%;
   height: auto;
   left:0vw;
-top:20%;
+bottom:30%;
   position: absolute;
   z-index: 2;
 }
@@ -75,7 +75,7 @@ display: flex;
 }
 #aiapl{
 
-  width: 30%;
+  width: 25%;
   height: auto;
 display: inline-flex;
 margin: auto;
@@ -97,4 +97,22 @@ bottom: 30%;
   font-weight: 400;
 margin-bottom: 0%;
 position:relative;
+}
+
+#back{
+  font-family: neue-haas-grotesk-display;
+  font-size: 1.5vw;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5;
+  border: solid 2px black;
+  padding: 1% 2%;
+}
+
+
+#back:hover{
+font-style: italic;
+color: red;
 }
