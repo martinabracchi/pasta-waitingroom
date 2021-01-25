@@ -203,7 +203,7 @@ bottom: var(--mobile-bottom-margin);
   bottom: 0;
   position: fixed;
   background-color: red;
-  height: 2em;
+  height: 5em;
 }
 
 #text-marquee {

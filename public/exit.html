@@ -15,6 +15,9 @@
             <!-- Mobile portrait mode -->
       <link rel='stylesheet' type='text/css' href='assets/css/mobile-portrait/exit-mp.css' media="screen and (orientation:portrait) and (max-width:991px)" >
       <link rel='stylesheet' type='text/css' href='assets/css/mobile-portrait/common-mp.css' media="screen and (orientation:portrait) and (max-width:991px)" >
+<!-- Mobile landscape mode -->
+      <link rel='stylesheet' type='text/css' href='assets/css/mobile-landscape/exit-ml.css' media="screen and (orientation:landscape) and (max-width:991px)">
+    <link rel='stylesheet' type='text/css' href='assets/css/mobile-landscape/common-ml.css' media="screen and (orientation:landscape) and (max-width:991px)">
 
   <link rel="stylesheet" href="https://use.typekit.net/ttj2hjf.css">
   <script src="p5.sound.min.js"></script>
@@ -60,6 +63,72 @@
 <div id='title'>PASTA CHUTE</div>
 </div>
 
+
+
+<div id="about-overlay" class="overlay">
+
+<!-- Button to close the overlay-->
+<a  class="closebtn" onclick="closeAbout()"><img class='close-img'src='assets/img/clsbtn.png'></a>
+
+<!-- Overlay content -->
+<div class="overlay-content">
+<p id='about-header' class="overlay-header">About</p>
+<p id='about-text'>"Pasta Chute" is a virtual common space developed for the course of <a href="https://drawwithcode.github.io/">Creative Coding</a> at Politecnico di Milano. Pasta is good, but which is the best? Our team wants to investigate the most controversial subject in our country. </p>
+<img onclick='showCredits()' id='troppo-italiano' src='assets/img/troppo-italiano.png' >
+<div id='credits'>
+<div id="team" class="credits-paragraph">Team: <a href="mailto:martinabracchi.mb@gmail.com">Martina Bracchi</a> - <a href="mailto:silcasavola@gmail.com">Silvia Casavola</a> - <a href="mailto:dario.faudella@gmail.com">Dario Faudella</a> - <a href="mailto:manuel.reale2000@gmail.com">Manuel Reale</a> - <a href="mailto:donren.99@gmail.com">Donato Renzulli</a></div><br>
+<div id="faculty" class="credits-paragraph">Faculty: Michele Mauri - Andrea Benedetti - Tommaso Elli</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!--RANKING -->
+<div id="ranking-overlay" class="overlay">
+
+<div class="overlay-content">
+
+<a  class="closebtn" onclick="closeRan()"><img class='close-img' src='assets/img/clsbtn.png'></a>
+<p id='ranking-header'  class="overlay-header">Ranking</p>
+
+<div id='table-div'>
+  <table id='tabella'>
+    <tr><td>Penne</td><td>24</tr>
+      <tr><td>Penne</td><td>24</tr>
+      <tr><td>Penne</td><td>24</tr>
+      <tr><td>Penne</td><td>24</tr>
+        <tr><td>Penne</td><td>24</tr>
+        <tr><td>Penne</td><td>24</tr>
+        <tr><td>Penne</td><td>24</tr>
+          <tr><td>Penne</td><td>24</tr>
+          <tr><td>Penne</td><td>24</tr>
+          <tr><td>Penne</td><td>24</tr>
+            <tr><td>Penne</td><td>24</tr>
+            <tr><td>Penne</td><td>24</tr>
+            <tr><td>Penne</td><td>24</tr>
+              <tr><td>Penne</td><td>24</tr>
+              <tr><td>Penne</td><td>24</tr>
+              <tr><td>Penne</td><td>24</tr>
+                <tr><td>Penne</td><td>24</tr>
+                <tr><td>Penne</td><td>24</tr>
+                <tr><td>Penne</td><td>24</tr>
+                  <tr><td>Penne</td><td>24</tr>
+                  <tr><td>Penne</td><td>24</tr>
+                  <tr><td>Penne</td><td>24</tr>
+                    <tr><td>Penne</td><td>24</tr>
+                    <tr><td>Penne</td><td>24</tr>
+                    <tr><td>Penne</td><td>24</tr>
+
+    </table>
+</div>
+
+</div>
+</div>
+
+
   <div id='div-header-final'>
   <p id='header-final'>Thank you and arrivederci!</p>
   </div>
@@ -74,7 +143,7 @@
 
 
 <div id='div-aiapl'>
-  <img id='aiapl'src="assets/aiapl.gif" alt="AIAPL" title="AIAPL" />
+  <img id='aiapl'src="assets/aiapl.gif" alt="AIAPL" title="AIAPL"/>
 </div>
 <img  id='dente' src='assets/dente.png' alt='Al dente' title='Al dente'/>
 <img  id='pin' src='assets/pin.png' alt='Mattarello' title='Mattarello'/>
